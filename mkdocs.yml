@@ -2,6 +2,10 @@ site_name: POWERUP Documentation
 site_description: Documentation for POWERUP
 site_url: https://hts-lab.github.io/powerup-docs/
 
+repo_url: https://github.com/hts-lab/powerup-docs
+repo_name: hts-lab/powerup-docs
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   features:
@@ -15,20 +19,16 @@ theme:
     - content.action.edit
   palette:
     - scheme: default
-      primary: deep purple
-      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: deep purple
-      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
 
-repo_name: hts-lab/powerup-docs
-repo_url: https://github.com/hts-lab/powerup-docs
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -46,6 +46,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - pymdownx.details
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.highlight:
